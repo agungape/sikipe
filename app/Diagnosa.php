@@ -8,7 +8,7 @@ class Diagnosa extends Model
 {
     protected $table = "m_diagnosas";
 
-    protected $fillable = ['code', 'name_en', 'name_id'];
+    protected $fillable = ['code', 'nama'];
 
     public function rincians()
     {

@@ -84,11 +84,10 @@ class RincianController extends Controller
 
     public function rincian_edit($id)
     {
-        $diagnosa = Diagnosa::pluck('name_id', 'code');
         $skp = Skp::pluck('skp', 'id_skp');
         $rincian = Rincian::where('id', $id)->first();
 
-        return view('rincian.edit', ['rincian' => $rincian, 'diagnosas' => $diagnosa, 'skps' => $skp]);
+        return view('rincian.edit', ['rincian' => $rincian, 'skps' => $skp]);
     }
 
     public function rincian_update(Request $request, $id)

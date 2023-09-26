@@ -55,7 +55,7 @@
                 </div>
                 <div class="form-group">
                     <label for="inputSubject">Diagnosa</label>
-                    {{ Form::select('m_diagnosa_id', $diagnosas, null,['class'=> 'form-control'])}}
+                    {{ Form::text('m_diagnosa_id', $rincian->diagnosa, ['class'=> 'form-control'])}}
                 </div>
                 <div class="form-group">
                     <label for="inputMessage">Tindakan</label>

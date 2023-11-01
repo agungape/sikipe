@@ -22,7 +22,7 @@
                  <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                  <li class="nav-item">
-                     <a href="{{ route ('kegiatan.index')}}" class="nav-link">
+                     <a href="{{ route ('kegiatan.index')}}" class="nav-link @yield('menuKegiatan')">
                          <i class="nav-icon far fa-calendar-alt"></i>
                          <p>
                              Kegiatan
@@ -30,8 +30,8 @@
                          </p>
                      </a>
                  </li>
-                 <li class="nav-item">
-                     <a href="#" class="nav-link">
+                 <li class="nav-item @yield('menuOpen')">
+                     <a href="#" class="nav-link @yield('menuBuka')">
                          <i class="nav-icon fas fa-copy"></i>
                          <p>
                              Master Data
@@ -40,19 +40,19 @@
                      </a>
                      <ul class="nav nav-treeview">
                          <li class="nav-item">
-                             <a href="{{route ('unitkerja.index')}}" class="nav-link">
+                             <a href="{{route ('unitkerja.index')}}" class="nav-link @yield('menuUnit')">
                                  <i class="far fa-circle nav-icon"></i>
                                  <p>Unit Kerja</p>
                              </a>
                          </li>
                          <li class="nav-item">
-                             <a href="{{route ('jabatan.index')}}" class="nav-link">
+                             <a href="{{route ('jabatan.index')}}" class="nav-link @yield('menuJabatan')">
                                  <i class="far fa-circle nav-icon"></i>
                                  <p>Jabatan</p>
                              </a>
                          </li>
                          <li class="nav-item">
-                             <a href="{{route ('skp.index')}}" class="nav-link">
+                             <a href="{{route ('skp.index')}}" class="nav-link @yield('menuSkp')">
                                  <i class="far fa-circle nav-icon"></i>
                                  <p>SKP</p>
                              </a>

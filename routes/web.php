@@ -6,6 +6,7 @@ use App\Http\Controllers\RincianController;
 use App\Http\Controllers\UnitkerjaController;
 use App\Http\Controllers\JabatanController;
 use App\Http\Controllers\SkpController;
+use App\Jabatan;
 use Illuminate\Support\Facades\Auth;
 use League\CommonMark\Block\Element\IndentedCode;
 
@@ -58,8 +59,10 @@ Route::post('/unitkerja/create', [UnitkerjaController::class, 'store'])->name('u
 Route::get('/jabatan', [JabatanController::class, 'index'])->name('jabatan.index');
 Route::get('/jabatan/create', [JabatanController::class, 'create'])->name('jabatan.create');
 Route::post('/jabatan/create', [JabatanController::class, 'store'])->name('jabatan.store');
+Route::delete('/jabatan/{id}', [JabatanController::class, 'destroy'])->name('jabatan.destroy');
 
 // route skp
 Route::get('/skp', [SkpController::class, 'index'])->name('skp.index');
+Route::get('/skp/{id}', [SkpController::class, 'destroy'])->name('skp.destroy');
 
 Route::get('/home', 'HomeController@index')->name('home');

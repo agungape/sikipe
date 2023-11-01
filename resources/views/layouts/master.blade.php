@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Komite </title>
+    <title>@yield('title') </title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="{{ asset('frontend') }}/plugins/daterangepicker/daterangepicker.css" />
     <!-- summernote -->
     <link rel="stylesheet" href="{{ asset('frontend') }}/plugins/summernote/summernote-bs4.min.css" />
+    <link rel="stylesheet" href="{{ asset('frontend') }}/plugins/daterangepicker/daterangepicker.css">
     <!-- DataTables -->
     <link rel="stylesheet" href="{{ asset('frontend') }}/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="{{ asset('frontend') }}/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
@@ -108,8 +109,11 @@
     <script src="{{ asset('frontend') }}/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
     <script src="{{ asset('frontend') }}/plugins/datatables-buttons/js/buttons.print.min.js"></script>
     <script src="{{ asset('frontend') }}/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+    <script src="{{ asset('frontend') }}/plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="{{ asset('frontend') }}/plugins/select2/js/select2.full.min.js"></script>
+    <script src="{{ asset('frontend') }}/plugins/inputmask/jquery.inputmask.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+    <script src="../../plugins/jquery/jquery.min.js"></script>
     @stack('scripts')
 
 </body>

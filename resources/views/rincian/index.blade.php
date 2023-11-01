@@ -1,5 +1,6 @@
 @extends('layouts.master')
-@section ('title', 'SPK | Data Prodi')
+@section('title', 'SIKIPE')
+@section('menuKegiatan','active')
 @section('content')
 <section class="content-header">
     <div class="container-fluid">

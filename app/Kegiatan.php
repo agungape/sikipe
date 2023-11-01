@@ -12,7 +12,7 @@ class Kegiatan extends Model
 
     protected $primaryKey = "id_kegiatan";
 
-    protected $fillable = ['id_kegiatan', 'pk_bk', 'm_jabatan_id', 'user_id', 'm_unitkerja_id', 'tanggal', 'jumlah_kegiatan', 'jam_efektif'];
+    protected $fillable = ['id_kegiatan', 'pk_bk', 'm_jabatan_id', 'user_id', 'm_unitkerja_id', 'tanggal', 'jumlah_kegiatan', 'jam_efektif', 'status'];
 
     public function rincians()
     {

@@ -1,5 +1,6 @@
 @extends('layouts.master')
-@section('title', 'Mitra')
+@section('title', 'SIKIPE')
+@section('menuKegiatan','active')
 @section('content')
 <section class="content-header">
     <div class="container-fluid">
@@ -38,6 +39,7 @@
                                     <th>Unit Kerja</th>
                                     <th>Jam Efektif Kerja</th>
                                     <th>Jumlah Kegiatan</th>
+                                    <th>Status</th>
                                     <th width="100">Aksi</th>
                                 </tr>
                             </thead>
@@ -73,6 +75,10 @@
                 {
                     data: 'jumlah_kegiatan',
                     name: 'jumlah_kegiatan'
+                },
+                {
+                    data: 'status',
+                    name: 'status'
                 },
                 {
                     data: 'action',

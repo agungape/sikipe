@@ -41,4 +41,11 @@ class JabatanController extends Controller
 
         return redirect()->route('jabatan.index')->with('pesan', "Penambahan Data Jabatan {$request['unit_kerja']} Berhasil");
     }
+
+    public function destroy($id)
+    {
+        $jabatan = Jabatan::where('id_jabatan', $id);
+        $jabatan->delete();
+        return redirect()->route('jabatan.index')->with('pesan', "Hapus data Jabatan berhasil");
+    }
 }

@@ -26,8 +26,11 @@ class KegiatanController extends Controller
         }
 
         return Datatables::of($kegiatan)
+            ->addColumn('status', function ($status) {
+                return $status->status == 1 ? 'Aktif' : 'Tidak Aktif';
+            })
             ->addColumn('action', function ($row) {
-                $action  = '<a href="/kegiatan_rincian/' . $row->id_kegiatan . ' " class="btn btn-primary btn-sm" style="margin-right: 14px"><i class="fas fa-plus"></i></a>';
+                $action  = '<a href="/kegiatan_rincian/' . $row->id_kegiatan . ' " class="btn btn-primary btn-sm" style="margin-right: 14px"><i class="fas fa-eye"></i></a>';
                 $action  = $action .  '<a href="/kegiatan/' . $row->id_kegiatan . '/edit" class="btn btn-warning btn-sm"><i class="fas fa-pencil-alt"></i></a>';
                 $action .= \Form::open(['url' => 'kegiatan/' . $row->id_kegiatan, 'method' => 'delete', 'style' => 'float:right']);
                 $action .= "<button type='submit'class='btn btn-danger btn-sm'><i class='fas fa-trash-alt'></i></button>";
